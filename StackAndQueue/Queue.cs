@@ -48,5 +48,24 @@ namespace StackAndQueue
             }
             Console.WriteLine();
         }
+        internal void Dequeue()
+        {
+            if (Head == null)
+            {
+                Console.WriteLine("Queue is Empty");
+            }
+            else
+            {
+                Console.WriteLine();
+                while (Head != null)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("{0} deleted ", Head.data);
+                    Head = Head.Next;
+                    Display();
+                }
+            }
+           
+        }
     }
 }
