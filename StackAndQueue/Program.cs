@@ -7,6 +7,7 @@
             Console.WriteLine(" Welcome to stack and queue");
 
             Console.WriteLine("Enter 1 to push elements into stack");
+            Console.WriteLine("Enter 2 to Peek and Pop elements From stack");
             int Num=int.Parse(Console.ReadLine());
             Stack stack = new Stack();
             switch (Num)
@@ -16,6 +17,13 @@
                     stack.Push(30);
                     stack.Push(56);
                     stack.Display();
+                    break;
+                    case 2:
+                    stack.Push(70);
+                    stack.Push(30);
+                    stack.Push(56);
+                    stack.Display();
+                    stack.Pop();
                     break;
                 default:
                     Console.WriteLine("Enter correct input");

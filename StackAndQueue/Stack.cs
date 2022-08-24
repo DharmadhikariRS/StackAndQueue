@@ -48,5 +48,41 @@ namespace StackAndQueue
             }
             Console.WriteLine();
         }
+        public void Peek()
+        {
+            if (Top == null)
+            {
+                Console.WriteLine("No element present");
+            }
+            else
+            {
+                Console.WriteLine();
+                Console.WriteLine("peek element of stack= " + Top.data);
+            }
+        }
+        internal void Pop()
+        {
+            if (Top == null)
+            {
+                Console.WriteLine("Stack is Empty");
+            }
+            else
+            {
+                Console.WriteLine();
+                while (Top != null)
+                {
+                    Peek();
+                    int PeekValue = Top.data;
+
+                    Top = Top.Next;
+
+                    Console.WriteLine("Deleted element= " + PeekValue);
+                    Display();
+
+
+                }
+            }
+            Console.WriteLine();
+        }
     }
 }
